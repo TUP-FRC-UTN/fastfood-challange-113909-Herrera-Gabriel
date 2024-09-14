@@ -1,0 +1,13 @@
+<!-- delivery.component.html -->
+<div>
+    <h3>Delivery Point</h3>
+    <ul>
+        @for (pedido of listosParaEntregar; track pedido) {
+        <li>
+            {{pedido.number}} - {{pedido.name}} - {{pedido.description}}
+            <button (click)="entregarPedido(pedido)">Entregar</button>
+        </li>
+        }
+    </ul>
+    <hr>
+</div>

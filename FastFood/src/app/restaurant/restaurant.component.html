@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>RESTAURANT FAST FOOD</h1>
+    <hr>
+    <app-delivery-point [listosParaEntregar]="pedidosListos"></app-delivery-point>
+    <app-pos (nuevoPedido)="agregarPedido($event)"></app-pos>
+    <app-kitchen [pedidosIngresados]="pedidosPendientes" (pedidoTerminado)="pedidoListo($event)"></app-kitchen>
+    <div>
+        <h3>Historial de pedidos</h3>
+        <ul>
+            @for(pedido of pedidosPendientes; track pedido){
+                <li>{{pedido.number}} - {{pedido.name}} - {{pedido.description}} </li>
+            }
+            
+        </ul>
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    <h1>RESTAURANT FAST FOOD</h1>
+    <div>
+        <h3>Pedidos Ingresados</h3>
+        <ul>
+            @for(pedido of pedidosIngresados; track pedido){
+                <li>{{pedido.number}} - {{pedido.name}} - {{pedido.description}} </li>
+            }
+            
+        </ul>
+    </div>
+    <div>
+        <h3>Pedidos listos para entregar</h3>
+        <ul>
+            @for(pedido of pedidosIngresados; track pedido){
+                <li>{{pedido.number}} - {{pedido.name}} <button (click)="Entregar(pedido)">Entregar!</button></li>
+            }
+            
+        </ul>
+    </div>
+    
+</div> -->

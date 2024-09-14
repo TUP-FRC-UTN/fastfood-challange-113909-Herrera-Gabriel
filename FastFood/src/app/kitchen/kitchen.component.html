@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Cocina</h2>
+    <h3>Pendiente de cocinar</h3>
+    <ul>
+        @for(pedido of pedidosIngresados; track pedido){
+        <li>{{pedido.number}} - {{pedido.name}} - {{pedido.description}}<button (click)="Cocinar(pedido)">Cocinar!</button></li>
+        }
+    </ul>
+    <h3>Pedidos en cocción</h3>
+    <ul>
+        
+        <li>({{pedidoCocion?.number}}) - {{pedidoCocion?.name}} - {{pedidoCocion?.description}}</li>
+    
+    </ul>
+    <button (click)="Terminar()">Terminado</button>
+    <hr>
+</div>
+

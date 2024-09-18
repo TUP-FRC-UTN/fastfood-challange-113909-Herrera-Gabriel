@@ -5,7 +5,7 @@
         @for(pedido of pedidoService.pedidosListos; track pedido){
             <li>  
                 {{pedido.number}} - {{pedido.name}} - {{pedido.description}}
-                <button class="btn btn-success" (click)="entregar(pedido)">Entegar!</button>
+                <button class="btn btn-success mt-2" (click)="entregar(pedido)">Entegar!</button>
             </li>
         }
     </ul>

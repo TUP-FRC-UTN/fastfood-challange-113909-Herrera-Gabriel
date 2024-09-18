@@ -1,18 +1,22 @@
 <div class="container">
     <h2>Cocina</h2>
-    <h3>Pendiente de cocinar</h3>
-    <ul>
-        @for(pedido of pedidoService.pedidoCocinar; track pedido){
-            <li>  {{pedido.number}} - {{pedido.name}} - {{pedido.description}}
-                <button class="btn btn-danger" (click)="cocinar(pedido)">Cocinar!</button></li>
-        }
-    </ul>
-    <h3>Pedidos de cocción</h3>
-    <ul>
-        <li>
-            {{pedidoService.pedidoCocinando?.number}} - {{pedidoService.pedidoCocinando?.name}} - {{pedidoService.pedidoCocinando?.description}}
-            <button class="btn btn-success" (click)="terminar()">Terminar!</button>
-        </li>
-    </ul>
+    <div>
+        <h3>Pendiente de cocinar</h3>
+        <ul>
+            @for(pedido of pedidoService.pedidoCocinar; track pedido){
+                <li>  {{pedido.number}} - {{pedido.name}} - {{pedido.description}}
+                    <button class="btn btn-danger mt-2" [disabled]="pedidoService.pedidoCocinando !== undefined" (click)="cocinar(pedido)">Cocinar</button></li>
+            }
+        </ul>
+    </div>
+    <div>
+        <h3>Pedidos de cocción</h3>
+        <ul>
+            <li>
+                {{pedidoService.pedidoCocinando?.number}} - {{pedidoService.pedidoCocinando?.name}} - {{pedidoService.pedidoCocinando?.description}}
+                <button class="btn btn-success mt-2" (click)="terminar()">Pedido Terminado!</button>
+            </li>
+        </ul>
+    </div>
 
 </div>

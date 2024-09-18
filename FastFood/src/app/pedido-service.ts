@@ -27,9 +27,8 @@ export class PedidoService{
     terminar() {
         if(this.pedidoCocinando != undefined){
             this.pedidosListos.push(this.pedidoCocinando)
-            console.log(this.pedidosListos)
         }
-        this.pedidoCocinando != undefined;
+        this.pedidoCocinando = undefined;
     }
 
     entregar(pedido: Pedido) {

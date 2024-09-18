@@ -3,11 +3,11 @@
         <h3>POS</h3>
         <div class="form-group m-3">
             <label for="nombre-input">Nombre:</label>
-            <input type="text" name="nombre-input" [(ngModel)]="nombre" required>
+            <input type="text" name="nombre-input" class="form-control" [(ngModel)]="nombre" required>
         </div>
         <div class="form-group m-3">
             <label for="pedido-input">Pedido:</label>
-            <input type="text" name="pedido-input" [(ngModel)]="descripcion" required>
+            <input type="text" name="pedido-input" class="form-control" [(ngModel)]="descripcion" required>
         </div>
         <button class="btn btn-primary" (click)="agregarPedido()">Ordenar</button>
     </form>

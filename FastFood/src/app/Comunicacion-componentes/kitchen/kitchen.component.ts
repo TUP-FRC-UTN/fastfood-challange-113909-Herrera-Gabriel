@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { POSComponent } from '../pos/pos.component';
-import { Pedido } from '../Pedido';
+import { Pedido } from '../../Pedido';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -23,12 +22,14 @@ export class KitchenComponent {
     }
   }
   Terminar() {
-    this.pedidoTerminado.emit(this.pedidoCocion)
-    //this.pedidosIngresados.filter(pedido => this.pedidosIngresados.includes(this.pedidoCocion))
+    if(this.pedidoCocion!= null){
+      this.pedidoTerminado.emit(this.pedidoCocion)
+      //this.pedidosIngresados.filter(pedido => this.pedidosIngresados.includes(this.pedidoCocion))
+      
+      this.pedidosIngresados = this.pedidosIngresados.filter(p => p !== this.pedidoCocion);
+      this.pedidoCocion = undefined;
+    }
     
-    this.pedidosIngresados = this.pedidosIngresados.filter(p => p !== this.pedidoCocion);
-    console.log(this.pedidosIngresados, this.pedidoCocion)
-    this.pedidoCocion = undefined;
     
     }
 }

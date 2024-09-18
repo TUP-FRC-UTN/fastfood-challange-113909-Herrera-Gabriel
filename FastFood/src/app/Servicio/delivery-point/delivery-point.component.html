@@ -1,0 +1,13 @@
+<div class="container">
+    <h3>Pedidos listos para entregar:</h3>
+    
+    <ul>
+        @for(pedido of pedidoService.pedidosListos; track pedido){
+            <li>  
+                {{pedido.number}} - {{pedido.name}} - {{pedido.description}}
+                <button class="btn btn-success" (click)="entregar(pedido)">Entegar!</button>
+            </li>
+        }
+    </ul>
+    
+</div>

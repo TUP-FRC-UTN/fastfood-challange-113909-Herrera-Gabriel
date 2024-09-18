@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>RESTAURANT FAST FOOD</h1>
+    <hr>
+    <h3>Pedidos ingresados:</h3>
+    @for (pedido of pedidoService.pedidoIngresados; track pedido) {
+        <ul>
+            <li>
+                {{pedido.number}} - {{pedido.name}} - {{pedido.description}}
+            </li>
+        </ul>
+    }
+    <hr>
+    <app-delivery-point></app-delivery-point>
+    <hr>
+    <app-pos></app-pos>
+    <app-kitchen></app-kitchen>
+</div>

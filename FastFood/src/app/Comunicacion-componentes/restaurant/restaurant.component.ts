@@ -4,7 +4,7 @@ import { DeliveryPointComponent } from '../delivery-point/delivery-point.compone
 import { KitchenComponent } from '../kitchen/kitchen.component';
 import { POSComponent } from '../pos/pos.component';
 import { CommonModule } from '@angular/common';
-import { Pedido } from '../pedido';
+import { Pedido } from '../../Pedido';
 
 @Component({
   selector: 'app-restaurant',

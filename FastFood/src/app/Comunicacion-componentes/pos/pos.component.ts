@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Pedido } from '../pedido';
+import { Pedido } from '../../Pedido';
 
 @Component({
   selector: 'app-pos',

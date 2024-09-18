@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { RestaurantComponent } from './restaurant/restaurant.component';
+import { RestaurantComponent } from './Servicio/restaurant/restaurant.component';
+import { PosComponent } from './Servicio/pos/pos.component';
+//import { RestaurantComponent } from './Comunicacion-componentes/restaurant/restaurant.component';
 
 @Component({
   selector: 'app-root',
